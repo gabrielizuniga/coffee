@@ -11,4 +11,5 @@
 |
 */
 
-Route::get('/', 'CoffeeController@index');
+Route::get('/', 'ContentsController@home');
+Route::get('/members', 'MembersController@index');

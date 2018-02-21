@@ -1,13 +1,13 @@
-<!doctype html>
-<html lang="en">
+@extends('layouts.app')
 
-  <head>
-      <meta charset="utf-8">
-      <title>Index</title>
-  </head>
+@section('content')
+    <h1>Coffee Club</h1>
+    <h2>Current Members</h2>
 
-  <body>
-      <h1>Members</h1>
-  </body>
+@foreach($famous_coffee_drinkers as $coffee_drinkers)
+        <ul>
+            <li>{{ $coffee_drinkers }}</li>
+        </ul>
+@endforeach
 
-</html>
+@endsection
