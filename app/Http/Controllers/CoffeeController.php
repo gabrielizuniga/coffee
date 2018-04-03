@@ -4,9 +4,20 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use DB;
+use App\Coffee;
+
 class CoffeeController extends Controller
 {
-    public function index() {
-    	return view('index');
-    	}
+    public function showCoffees()
+    {
+    //    Query builder syntax
+    //     $coffees = DB::table('coffees')->get();
+
+    //     Eloquent syntax
+        $coffees =  Coffee::all();
+
+        return view('coffees.index', compact('coffees'));
+    }
+
 }
