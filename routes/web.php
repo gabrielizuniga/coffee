@@ -13,4 +13,5 @@
 
 Route::get('/', 'ContentsController@home');
 Route::get('/coffees', 'CoffeeController@showCoffees');
+Route::get('/coffees/{coffee}', 'CoffeeController@show');
 Route::get('/members', 'MembersController@index');
